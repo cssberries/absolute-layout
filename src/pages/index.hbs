@@ -2,156 +2,74 @@
 layout: default.hbs
 main-nav: index
 ---
-<div class="blocks-container">
-    <h1 class="margin-b--xl margin-t--xxxl">sub-atoms</h1>
-    <p>
-    sub-atoms is a CSS framework that extends the <a href="http://bradfrostweb.com/blog/post/atomic-web-design/">Atomic Design</a> methodology to the sub-atomic level.
-    </p>
-    <div class="sub-title  bg--tertiary padding-v--md padding-h--xs">Backgrounds</div>
-    <div class="flex margin-h--sm">
-        <div class="demo-block bg--content border"></div>
-        <div class="demo-block bg--canvas"></div>
-        <div class="demo-block bg"></div>
-        <div class="demo-block bg--dark"></div>
-        <div class="demo-block bg--darker"></div>
-        <div class="demo-block bg--accent"></div>
-        <div class="demo-block bg--tertiary"></div>
-        <div class="demo-block bg--secondary"></div>
-        <div class="demo-block bg--primary"></div>
-    </div>
-    <div class="sub-title  bg--tertiary padding-v--md padding-h--xs">Borders</div>
-    <div class="flex margin-h--sm"><div class="demo-block bg-image--diagonal border--t"></div>
-    <div class="demo-block bg-image--diagonal border--r"></div>
-    <div class="demo-block bg-image--diagonal border--b"></div>
-    <div class="demo-block bg-image--diagonal border--l"></div>
-    <div class="demo-block bg-image--diagonal border--h"></div>
-    <div class="demo-block bg-image--diagonal border--v"></div>
-    <div class="demo-block bg-image--diagonal border"></div></div>
-    <div class="sub-title  bg--tertiary padding-v--md padding-h--xs">Radiuses</div>
-    <div class="flex margin-h--sm"><div class="demo-block bg-image--diagonal border radius--xs"></div>
-    <div class="demo-block bg-image--diagonal border radius--sm"></div>
-    <div class="demo-block bg-image--diagonal border radius--md"></div>
-    <div class="demo-block bg-image--diagonal border radius--lg"></div>
-    <div class="demo-block bg-image--diagonal border radius--xl"></div>
-    <div class="demo-block bg-image--diagonal border radius--full"></div></div>
-    <div class="sub-title  bg--tertiary padding-v--md padding-h--xs">Widths & Heights</div>
-    <div class="scroll--auto padding-h--lg padding-l--3xl margin-b--md sons--show-value">
-        <div class="width--micro--xxs height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--micro--xs height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--micro--sm height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--micro--md height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--micro--lg height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--micro--xl height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--micro--xxl height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--xxs height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--xs height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--sm height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--md height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--lg height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--xl height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--xxl height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--macro--xxs height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--macro--xs height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--macro--sm height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--macro--md height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--macro--lg height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--macro--xl height--micro--xl margin-b--xs bg--secondary"></div>
-        <div class="width--macro--xxl height--micro--xl margin-b--xs bg--secondary"></div>
-    </div>
-    <div class="sub-title  bg--tertiary padding-v--md padding-h--xs">Paddings</div>
-<div class="flex margin-h--sm">
-            <div class="*demo-block">
-                <div class="padding-l--3xs bg--accent">
-                    <div class="box"></div>
+
+<div class="layout">
+    <div class="row-header--3xs height--md__row-header--xs bg--light border--b">Msthead</div>
+    <div class="row-footer--3xs height--md__row-footer--xs *bg--dark border--t"></div>
+    <div class="row-main">
+        <div class="row-header--xs height--lg__row-header--md border--b">Page header</div>
+        <div class="row-main">
+            <div class="layout">
+                <div class="col-left--xxs width--md__col-left--xl bg--light border--r">
+                    <div class="layout">
+                        <div class="row-header--xl width--md__row-header--xxs border--b">
+                            <div class="gallery--sm margin-t--sm margin-l--sm">
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                            </div>
+                        </div>
+                        <div class="row-main"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="*demo-block">
-                <div class="padding-l--xxs bg--accent">
-                    <div class="box"></div>
+                <div class="col-right--xxs width--md__col-right--xl border--l bg--light">
+                    <div class="layout">
+                        <div class="row-header--xl width--md__row-header--xxs border--b">
+                            <div class="gallery--sm margin-t--sm margin-l--sm">
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                            </div>
+                        </div>
+                        <div class="row-main"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="*demo-block">
-                <div class="padding-l--xs bg--accent">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block">
-                <div class="padding-l--sm bg--accent">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block">
-                <div class="padding-l--md bg--accent">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block">
-                <div class="padding-l--lg bg--accent">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block">
-                <div class="padding-l--xl bg--accent">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block">
-                <div class="padding-l--xxl bg--accent">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block">
-                <div class="padding-l--3xl bg--accent">
-                    <div class="box"></div>
+                <div class="col-main">
+                    <div class="layout margin--xl">
+                        <div class="row-header--xs width--sm__row-header--3xs border--b">
+                            <div class="gallery--sm">
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                                <div class="box--xxs"></div>
+                            </div>
+                        </div>
+                        <div class="row-main layout-scroll padding-t--md">
+                            <div class="lorem-ipsum--500"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-            <div class="sub-title  bg--tertiary padding-v--md padding-h--xs">Margins</div>
-<div class="flex margin-h--sm">
-            <div class="*demo-block  bg--primary">
-                <div class="margin-l--3xs">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block  bg--primary">
-                <div class="margin-l--xxs">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block bg--primary">
-                <div class="margin-l--xs">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block bg--primary">
-                <div class="margin-l--sm">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block bg--primary">
-                <div class="margin-l--md">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block bg--primary">
-                <div class="margin-l--lg">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block bg--primary">
-                <div class="margin-l--xl">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block  bg--primary">
-                <div class="margin-l--xxl">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="*demo-block  bg--primary">
-                <div class="margin-l--3xl">
-                    <div class="box"></div>
-                </div>
-            </div>
-        </div>
+    </div>
 </div>

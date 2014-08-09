@@ -1,6 +1,3 @@
 {
 	"directory": "vendor"
-    "proxy" : "http://web-proxy.isr.hp.com",
-    "https-proxy" : "http://web-proxy.isr.hp.com",
-    "strict-ssl": false
 }
