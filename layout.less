@@ -1,0 +1,222 @@
+
+@modular-ratio:                1.5;
+
+@layout:                       layout;
+@row-top:                      row-header;
+@row-main:                     row-main;
+@row-bottom:                   row-footer;
+
+@col-left:                     col-left;
+@col-main:                     col-main;
+@col-right:                    col-right;
+
+@3xs:                          24px;
+@xxs:                          round(@3xs * @modular-ratio);
+@xs:                           round(@xxs * @modular-ratio);
+@sm:                           round(@xs * @modular-ratio);
+@md:                           round(@sm * @modular-ratio);
+@lg:                           round(@md * @modular-ratio);
+@xl:                           round(@lg * @modular-ratio);
+@xxl:                          round(@xl * @modular-ratio);
+@3xl:                          round(@xxl * @modular-ratio);
+
+@xs-max-height:                400px;
+@sm-max-height:                600px;
+@md-max-height:                800px;
+@lg-max-height:                1000px;
+//  "xl" height is above the "lg" height to infinite.
+
+@xs-max-width:                 768px;
+@sm-max-width:                 1024px;
+@md-max-width:                 1366px;
+@lg-max-width:                 1680px;
+//  "xl" width is above the "lg" width to infinite.
+
+@sm-min-height:                @xs-max-height;
+@md-min-height:                @sm-max-height;
+@lg-min-height:                @md-max-height;
+@xl-min-height:                @lg-max-height;
+
+@sm-min-width:                 @xs-max-width;
+@md-min-width:                 @sm-max-width;
+@lg-min-width:                 @md-max-width;
+@xl-min-width:                 @lg-max-width;
+
+//  Choose names for screen size ranges.
+//  Example: "desktop__", "tablet__", "laptop__" etc. 
+@screen-size-name--xl:         xl__;
+@screen-size-name--lg:         lg__;
+@screen-size-name--md:         md__;
+@screen-size-name--sm:         sm__;
+@screen-size-name--xs:         xs__;
+
+@screen-width-name--xl:        width--xl__;
+@screen-width-name--lg:        width--lg__;
+@screen-width-name--md:        width--md__;
+@screen-width-name--sm:        width--sm__;
+@screen-width-name--xs:        width--xs__;
+
+
+@screen-height-name--xl:       height--xl__;
+@screen-height-name--lg:       height--lg__;
+@screen-height-name--md:       height--md__;
+@screen-height-name--sm:       height--sm__;
+@screen-height-name--xs:       height--xs__;
+
+
+.layout-section {
+	overflow: hidden;
+	box-sizing: border-box;
+	position: absolute;
+}
+.shrink--horizontally {
+    left: 0;
+    right: 0;
+}
+.shrink--vertically {
+	top: 0;
+	bottom: 0;
+}
+.align--top {
+	top: 0;
+}
+.align--right {
+    right: 0;
+}
+.align--bottom {
+	bottom: 0;
+}
+.align--left {
+    left: 0;
+}
+.height--3xs{height: @3xs}
+.height--xxs{height: @xxs}
+.height--xs{height: @xs}
+.height--sm{height: @sm}
+.height--md{height: @md}
+.height--lg{height: @lg}
+.height--xl{height: @xl}
+.height--xxl{height: @xxl}
+.height--3xl{height: @3xl}
+
+.width--3xs{width: @3xs}
+.width--xxs{width: @xxs}
+.width--xs{width: @xs}
+.width--sm{width: @sm}
+.width--md{width: @md}
+.width--lg{width: @lg}
+.width--xl{width: @xl}
+.width--xxl{width: @xxl}
+.width--3xl{width: @3xl}
+
+[class*="@{row-top}"]{&:extend(.layout-section);&:extend(.shrink--horizontally);&:extend(.align--top);}
+[class*="@{row-main}"],.@{layout} {&:extend(.layout-section);&:extend(.shrink--horizontally);&:extend(.shrink--vertically);}
+[class*="@{row-bottom}"]{&:extend(.layout-section);&:extend(.shrink--horizontally);&:extend(.align--bottom);}
+[class*="@{col-left}"]{&:extend(.layout-section);&:extend(.shrink--vertically);&:extend(.align--left);}
+[class*="@{col-main}"]{&:extend(.layout-section);&:extend(.shrink--horizontally);&:extend(.shrink--vertically);}
+[class*="@{col-right}"]{&:extend(.layout-section);&:extend(.shrink--vertically);&:extend(.align--right);}
+
+.generate-layout(@namespace){
+	// @import "layout-template_fine-structure";
+	@import "layout-template_clean-classes";
+}
+  @empty: ;
+.generate-layout(@empty);
+
+@screen-size--xl: ~"(min-height: @{xl-min-height}) and (min-width: @{xl-min-width})";
+@screen-size--lg: ~"(min-height: @{lg-min-height}) and (min-width: @{lg-min-width})";
+@screen-size--md: ~"(min-height: @{md-min-height}) and (min-width: @{md-min-width})";
+@screen-size--sm: ~"(min-height: @{sm-min-height}) and (min-width: @{sm-min-width})";
+@screen-size--xs: ~"(max-height: @{xs-max-height}), (max-width: @{xs-max-width})";
+
+@media @screen-size--xs{.generate-layout(@screen-size-name--xs)}
+@media @screen-size--sm{.generate-layout(@screen-size-name--sm)}
+@media @screen-size--md{.generate-layout(@screen-size-name--md)}
+@media @screen-size--lg{.generate-layout(@screen-size-name--lg)}
+@media @screen-size--xl{.generate-layout(@screen-size-name--xl)}
+
+
+
+@screen-width--xl: ~"(min-width: @{xl-min-width})";
+@screen-width--lg: ~"(min-width: @{lg-min-width})";
+@screen-width--md: ~"(min-width: @{md-min-width})";
+@screen-width--sm: ~"(min-width: @{sm-min-width})";
+@screen-width--xs: ~"(max-width: @{xs-max-width})";
+
+@media @screen-width--xs{.generate-layout(@screen-width-name--xs)}
+@media @screen-width--sm{.generate-layout(@screen-width-name--sm)}
+@media @screen-width--md{.generate-layout(@screen-width-name--md)}
+@media @screen-width--lg{.generate-layout(@screen-width-name--lg)}
+@media @screen-width--xl{.generate-layout(@screen-width-name--xl)}
+
+@screen-height--xl: ~"(min-height: @{xl-min-height})";
+@screen-height--lg: ~"(min-height: @{lg-min-height})";
+@screen-height--md: ~"(min-height: @{md-min-height})";
+@screen-height--sm: ~"(min-height: @{sm-min-height})";
+@screen-height--xs: ~"(max-height: @{xs-max-height})";
+
+@media @screen-height--xs{.generate-layout(@screen-height-name--xs)}
+@media @screen-height--sm{.generate-layout(@screen-height-name--sm)}
+@media @screen-height--md{.generate-layout(@screen-height-name--md)}
+@media @screen-height--lg{.generate-layout(@screen-height-name--lg)}
+@media @screen-height--xl{.generate-layout(@screen-height-name--xl)}
+
+
+
+// *{
+// 	background-color: rgba(0, 0, 0, 0.1)!important;
+// 	border-color: rgba(0, 0, 0, 0.2)!important;
+// 	color: rgba(255, 255, 255, 1)!important;
+// 	transition: all 0.256s;
+// }
+
+@layout-color:             white!important;
+
+@row-main-color:           rgba(150, 200, 150, 1)!important;
+@row-top-color:            darken(@row-main-color, 10%)!important;  
+@row-bottom-color:         darken(@row-main-color, 10%)!important;
+
+@col-main-color:           rgba(200, 150, 150, 1)!important;
+@col-left-color:          darken(@col-main-color, 10%)!important;
+@col-right-color:         darken(@col-main-color, 10%)!important;
+
+// .@{row-top},
+// .@{row-main},
+// .@{row-bottom},
+// .@{col-left},
+// .@{col-main},
+// .@{col-right},
+// .@{layout}{
+// 	border-width: 0!important;
+// 	color: white!important;
+// 	*{color: white!important}
+// }
+// .@{layout}{background-color: white; .margin--md;}
+// [class*="@{col-right}--"]>.@{col-main}{background-color: @col-main-color;}
+// [class*="@{col-left}--"]>.@{col-main}{background-color: @col-main-color;}
+// [class*="@{row-top}--"]>.@{row-main}{background-color: @row-main-color;}
+// [class*="@{row-bottom}--"]>.@{row-main}{background-color: @row-main-color;}
+// .@{col-left},.@{col-right}{background-color: @col-left-color;}
+// .@{row-top},.@{row-bottom}{background-color: @row-top-color;}
+
+.layout-box{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	.margin-b--xl;
+}
+
+@media (min-height: 900px){
+	.layout-box{
+	height: 300px;
+	.margin-b--xl;
+}
+}
+.layout-scroll{
+	// overflow: hidden;
+	overflow: auto;
+}
+
+.layout-box--xl{
+	height: 500px;
+}

@@ -1,0 +1,68 @@
+.@{namespace}@{row-top}--3xs{height: @3xs;+div+.@{row-main},+.@{row-main}{top: @3xs}}
+.@{namespace}@{row-top}--xxs{height: @xxs;+div+.@{row-main},+.@{row-main}{top: @xxs}}
+.@{namespace}@{row-top}--xs{height: @xs;+div+.@{row-main},+.@{row-main}{top: @xs}}
+.@{namespace}@{row-top}--sm{height: @sm;+div+.@{row-main},+.@{row-main}{top: @sm}}
+.@{namespace}@{row-top}--md{height: @md;+div+.@{row-main},+.@{row-main}{top: @md}}
+.@{namespace}@{row-top}--lg{height: @lg;+div+.@{row-main},+.@{row-main}{top: @lg}}
+.@{namespace}@{row-top}--xl{height: @xl;+div+.@{row-main},+.@{row-main}{top: @xl}}
+.@{namespace}@{row-top}--xxl{height: @xxl;+div+.@{row-main},+.@{row-main}{top: @xxl}}
+.@{namespace}@{row-top}--3xl{height: @3xl;+div+.@{row-main},+.@{row-main}{top: @3xl}}
+
+.@{namespace}@{row-bottom}--3xs{height: @3xs;+div+.@{row-main},+.@{row-main}{bottom: @3xs}}
+.@{namespace}@{row-bottom}--xxs{height: @xxs;+div+.@{row-main},+.@{row-main}{bottom: @xxs}}
+.@{namespace}@{row-bottom}--xs{height: @xs;+div+.@{row-main},+.@{row-main}{bottom: @xs}}
+.@{namespace}@{row-bottom}--sm{height: @sm;+div+.@{row-main},+.@{row-main}{bottom: @sm}}
+.@{namespace}@{row-bottom}--md{height: @md;+div+.@{row-main},+.@{row-main}{bottom: @md}}
+.@{namespace}@{row-bottom}--lg{height: @lg;+div+.@{row-main},+.@{row-main}{bottom: @lg}}
+.@{namespace}@{row-bottom}--xl{height: @xl;+div+.@{row-main},+.@{row-main}{bottom: @xl}}
+.@{namespace}@{row-bottom}--xxl{height: @xxl;+div+.@{row-main},+.@{row-main}{bottom: @xxl}}
+.@{namespace}@{row-bottom}--3xl{height: @3xl;+div+.@{row-main},+.@{row-main}{bottom: @3xl}}
+
+.@{namespace}@{col-left}--3xs{width: @3xs;+div+.@{col-main},+.@{col-main}{left: @3xs}}
+.@{namespace}@{col-left}--xxs{width: @xxs;+div+.@{col-main},+.@{col-main}{left: @xxs}}
+.@{namespace}@{col-left}--xs{width: @xs;+div+.@{col-main},+.@{col-main}{left: @xs}}
+.@{namespace}@{col-left}--sm{width: @sm;+div+.@{col-main},+.@{col-main}{left: @sm}}
+.@{namespace}@{col-left}--md{width: @md;+div+.@{col-main},+.@{col-main}{left: @md}}
+.@{namespace}@{col-left}--lg{width: @lg;+div+.@{col-main},+.@{col-main}{left: @lg}}
+.@{namespace}@{col-left}--xl{width: @xl;+div+.@{col-main},+.@{col-main}{left: @xl}}
+.@{namespace}@{col-left}--xxl{width: @xxl;+div+.@{col-main},+.@{col-main}{left: @xxl}}
+.@{namespace}@{col-left}--3xl{width: @3xl;+div+.@{col-main},+.@{col-main}{left: @3xl}}
+
+.@{namespace}@{col-right}--3xs{width: @3xs;+div+.@{col-main},+.@{col-main}{right: @3xs}}
+.@{namespace}@{col-right}--xxs{width: @xxs;+div+.@{col-main},+.@{col-main}{right: @xxs}}
+.@{namespace}@{col-right}--xs{width: @xs;+div+.@{col-main},+.@{col-main}{right: @xs}}
+.@{namespace}@{col-right}--sm{width: @sm;+div+.@{col-main},+.@{col-main}{right: @sm}}
+.@{namespace}@{col-right}--md{width: @md;+div+.@{col-main},+.@{col-main}{right: @md}}
+.@{namespace}@{col-right}--lg{width: @lg;+div+.@{col-main},+.@{col-main}{right: @lg}}
+.@{namespace}@{col-right}--xl{width: @xl;+div+.@{col-main},+.@{col-main}{right: @xl}}
+.@{namespace}@{col-right}--xxl{width: @xxl;+div+.@{col-main},+.@{col-main}{right: @xxl}}
+.@{namespace}@{col-right}--3xl{width: @3xl;+div+.@{col-main},+.@{col-main}{right: @3xl}}
+
+.layout--example{
+	font-size: 16px;
+	font-family: monospace;
+	// text-align: center;
+	// vertical-align: middle;
+	.@{row-top},
+	.@{row-main},
+	.@{row-bottom},
+	.@{col-left},
+	.@{col-main},
+	.@{col-right},
+	.@{layout}{
+		border-width: 0!important;
+		// border: 1px solid rgba(0, 0, 0, 0.2)!important;
+		color: white!important;
+		*{
+			color: white!important
+		}
+	}
+	// .rows-group{background-color: white; .margin--md;}
+	[class*="@{col-right}--"]+.@{col-main}{background-color: @col-main-color; }
+	[class*="@{col-left}--"]+.@{col-main}{background-color: @col-main-color;}
+	[class*="@{row-top}--"]+.@{row-main}{background-color: @row-main-color;}
+	[class*="@{row-bottom}--"]+.@{row-main}{background-color: @row-main-color;}
+	[class*="@{col-left}--"],[class*="@{col-right}--"]{background-color: @col-left-color; }
+	[class*="@{row-top}--"],[class*="@{row-bottom}--"]{background-color: @row-top-color;}
+
+}

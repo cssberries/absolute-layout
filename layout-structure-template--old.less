@@ -1,0 +1,178 @@
+@modular-ratio:                1.5;
+
+@row-top:                      row-header;
+@row-main:                     row-main;
+@row-bottom:                   row-footer;
+
+@col-left:                     col-left;
+@col-main:                     col-main;
+@col-right:                    col-right;
+
+@3xs:                          24px;
+@xxs:                          @3xs * @modular-ratio;
+@xs:                           24px;
+@sm:                           @xs * @modular-ratio;
+@md:                           @sm * @modular-ratio;
+@lg:                           @md * @modular-ratio;
+@xl:                           @lg * @modular-ratio;
+@xxl:                          @xl * @modular-ratio;
+@3xl:                          @xxl * @modular-ratio;
+
+@width-name--5xs:              width--hintbar--narrow;
+@width-name--4xs:              width--hintbar--normal;
+@width-name--3xs:              width--hintbar--wide;
+@width-name--xxs:              width--toolbar--narrow;
+@width-name--xs:               width--toolbar--normal;
+@width-name--sm:               width--toolbar--wide;
+@width-name--md:               width--pane--narrower;
+@width-name--lg:               width--pane--narrow;
+@width-name--xl:               width--pane--normal;
+@width-name--xxl:              width--pane--wide;
+@width-name--3xl:              width--content--narrow;
+@width-name--4xl:              width--content--normal;
+@width-name--5xl:              width--content--wide;
+
+@width--5xs:                   @width--hintbar--narrow;
+@width--4xs:                   @width--hintbar--normal;
+@width--3xs:                   @width--hintbar--wide;
+@width--xxs:                   @width--toolbar--narrow;
+@width--xs:                    @width--toolbar--normal;
+@width--sm:                    @width--toolbar--wide;
+@width--md:                    @width--pane--narrower;
+@width--lg:                    @width--pane--narrow;
+@width--xl:                    @width--pane--normal;
+@width--xxl:                   @width--pane--wide;
+@width--3xl:                   @width--content--narrow;
+@width--4xl:                   @width--content--normal;
+@width--5xl:                   @width--content--wide;
+
+@fluid--width-name--5xs:       fluid--width--hintbar--narrow;
+@fluid--width-name--4xs:       fluid--width--hintbar--normal;
+@fluid--width-name--3xs:       fluid--width--hintbar--wide;
+@fluid--width-name--xxs:       fluid--width--toolbar--narrow;
+@fluid--width-name--xs:        fluid--width--toolbar--normal;
+@fluid--width-name--sm:        fluid--width--toolbar--wide;
+@fluid--width-name--md:        fluid--width--pane--narrower;
+@fluid--width-name--lg:        fluid--width--pane--narrow;
+@fluid--width-name--xl:        fluid--width--pane--normal;
+@fluid--width-name--xxl:       fluid--width--pane--wide;
+@fluid--width-name--3xl:       fluid--width--content--narrow;
+@fluid--width-name--4xl:       fluid--width--content--normal;
+@fluid--width-name--5xl:       fluid--width--content--wide;
+
+@fluid--width--5xs:            @fluid--width--hintbar--narrow;
+@fluid--width--4xs:            @fluid--width--hintbar--normal;
+@fluid--width--3xs:            @fluid--width--hintbar--wide;
+@fluid--width--xxs:            @fluid--width--toolbar--narrow;
+@fluid--width--xs:             @fluid--width--toolbar--normal;
+@fluid--width--sm:             @fluid--width--toolbar--wide;
+@fluid--width--md:             @fluid--width--pane--narrower;
+@fluid--width--lg:             @fluid--width--pane--narrow;
+@fluid--width--xl:             @fluid--width--pane--normal;
+@fluid--width--xxl:            @fluid--width--pane--wide;
+@fluid--width--3xl:            @fluid--width--content--narrow;
+@fluid--width--4xl:            @fluid--width--content--normal;
+@fluid--width--5xl:            @fluid--width--content--wide;
+
+
+@xs-max-height:                400px;
+@sm-max-height:                600px;
+@md-max-height:                900px;
+@lg-max-height:                850px;
+//  "xl" height is above the "lg" height to infinite.
+
+@xs-max-width:                 768px;
+@sm-max-width:                 1024px;
+@md-max-width:                 1366px;
+@lg-max-width:                 1680px;
+//  "xl" width is above the "lg" width to infinite.
+
+@width-breakpoint--xs:         on-width--xs__;
+@width-breakpoint--sm:         on-width--sm__;
+@width-breakpoint--md:         on-width--md__;
+@width-breakpoint--lg:         on-width--lg__;
+@width-breakpoint--xl:         on-width--xl__;
+
+@height-breakpoint--xs:        on-height--xs__;
+@height-breakpoint--sm:        on-height--sm__;
+@height-breakpoint--md:        on-height--md__;
+@height-breakpoint--lg:        on-height--lg__;
+@height-breakpoint--xl:        on-height--xl__;
+
+
+// .@{namespace}@{row-top}--3xs{height: @3xs;+.@{row-main},+div+.@{row-main}{top: @3xs}}
+// .@{namespace}@{row-top}--xxs{height: @xxs;+.@{row-main},+div+.@{row-main}{top: @xxs}}
+.@{namespace}@{row-top}--xs{height: @xs;+.@{row-main},+div+.@{row-main}{top: @xs}}
+.@{namespace}@{row-top}--sm{height: @sm;+.@{row-main},+div+.@{row-main}{top: @sm}}
+.@{namespace}@{row-top}--md{height: @md;+.@{row-main},+div+.@{row-main}{top: @md}}
+.@{namespace}@{row-top}--lg{height: @lg;+.@{row-main},+div+.@{row-main}{top: @lg}}
+.@{namespace}@{row-top}--xl{height: @xl;+.@{row-main},+div+.@{row-main}{top: @xl}}
+.@{namespace}@{row-top}--xxl{height: @xxl;+.@{row-main},+div+.@{row-main}{top: @xxl}}
+// .@{namespace}@{row-top}--3xl{height: @3xl;+.@{row-main},+div+.@{row-main}{top: @3xl}}
+
+// .@{namespace}@{row-bottom}--3xs{height: @3xs;+.@{row-main}{bottom: @3xs}}
+// .@{namespace}@{row-bottom}--xxs{height: @xxs;+.@{row-main}{bottom: @xxs}}
+.@{namespace}@{row-bottom}--xs{height: @xs;+.@{row-main}{bottom: @xs}}
+.@{namespace}@{row-bottom}--sm{height: @sm;+.@{row-main}{bottom: @sm}}
+.@{namespace}@{row-bottom}--md{height: @md;+.@{row-main}{bottom: @md}}
+.@{namespace}@{row-bottom}--lg{height: @lg;+.@{row-main}{bottom: @lg}}
+.@{namespace}@{row-bottom}--xl{height: @xl;+.@{row-main}{bottom: @xl}}
+.@{namespace}@{row-bottom}--xxl{height: @xxl;+.@{row-main}{bottom: @xxl}}
+// .@{namespace}@{row-bottom}--3xl{height: @3xl;+.@{row-main}{bottom: @3xl}}
+
+
+.@{namespace}@{col-left}.@{width-name--5xs}{width: @width--5xs;+.@{col-main},+div+.@{col-main}{left: @width--5xs}}
+.@{namespace}@{col-left}.@{width-name--4xs}{width: @width--4xs;+.@{col-main},+div+.@{col-main}{left: @width--4xs}}
+.@{namespace}@{col-left}.@{width-name--3xs}{width: @width--3xs;+.@{col-main},+div+.@{col-main}{left: @width--3xs}}
+.@{namespace}@{col-left}.@{width-name--xxs}{width: @width--xxs;+.@{col-main},+div+.@{col-main}{left: @width--xxs}}
+.@{namespace}@{col-left}.@{width-name--xs}{width: @width--xs;+.@{col-main},+div+.@{col-main}{left: @width--xs}}
+.@{namespace}@{col-left}.@{width-name--sm}{width: @width--sm;+.@{col-main},+div+.@{col-main}{left: @width--sm}}
+.@{namespace}@{col-left}.@{width-name--md}{width: @width--md;+.@{col-main},+div+.@{col-main}{left: @width--md}}
+.@{namespace}@{col-left}.@{width-name--lg}{width: @width--lg;+.@{col-main},+div+.@{col-main}{left: @width--lg}}
+.@{namespace}@{col-left}.@{width-name--xl}{width: @width--xl;+.@{col-main},+div+.@{col-main}{left: @width--xl}}
+.@{namespace}@{col-left}.@{width-name--xxl}{width: @width--xxl;+.@{col-main},+div+.@{col-main}{left: @width--xxl}}
+.@{namespace}@{col-left}.@{width-name--3xl}{width: @width--3xl;+.@{col-main},+div+.@{col-main}{left: @width--3xl}}
+.@{namespace}@{col-left}.@{width-name--3xl}{width: @width--4xl;+.@{col-main},+div+.@{col-main}{left: @width--4xl}}
+.@{namespace}@{col-left}.@{width-name--3xl}{width: @width--5xl;+.@{col-main},+div+.@{col-main}{left: @width--5xl}}
+
+.@{namespace}@{col-right}.@{width-name--5xs}{width: @width--5xs;+.@{col-main}{right: @width--5xs}}
+.@{namespace}@{col-right}.@{width-name--4xs}{width: @width--4xs;+.@{col-main}{right: @width--4xs}}
+.@{namespace}@{col-right}.@{width-name--3xs}{width: @width--3xs;+.@{col-main}{right: @width--3xs}}
+.@{namespace}@{col-right}.@{width-name--xxs}{width: @width--xxs;+.@{col-main}{right: @width--xxs}}
+.@{namespace}@{col-right}.@{width-name--xs}{width: @width--xs;+.@{col-main}{right: @width--xs}}
+.@{namespace}@{col-right}.@{width-name--sm}{width: @width--sm;+.@{col-main}{right: @width--sm}}
+.@{namespace}@{col-right}.@{width-name--md}{width: @width--md;+.@{col-main}{right: @width--md}}
+.@{namespace}@{col-right}.@{width-name--lg}{width: @width--lg;+.@{col-main}{right: @width--lg}}
+.@{namespace}@{col-right}.@{width-name--xl}{width: @width--xl;+.@{col-main}{right: @width--xl}}
+.@{namespace}@{col-right}.@{width-name--xxl}{width: @width--xxl;+.@{col-main}{right: @width--xxl}}
+.@{namespace}@{col-right}.@{width-name--3xl}{width: @width--3xl;+.@{col-main}{right: @width--3xl}}
+.@{namespace}@{col-right}.@{width-name--4xl}{width: @width--4xl;+.@{col-main}{right: @width--4xl}}
+.@{namespace}@{col-right}.@{width-name--5xl}{width: @width--5xl;+.@{col-main}{right: @width--5xl}}
+
+.@{namespace}@{col-left}.@{fluid--width-name--5xs}{width: @fluid--width--5xs;+.@{col-main},+div+.@{col-main}{left: @fluid--width--5xs}}
+.@{namespace}@{col-left}.@{fluid--width-name--4xs}{width: @fluid--width--4xs;+.@{col-main},+div+.@{col-main}{left: @fluid--width--4xs}}
+.@{namespace}@{col-left}.@{fluid--width-name--3xs}{width: @fluid--width--3xs;+.@{col-main},+div+.@{col-main}{left: @fluid--width--3xs}}
+.@{namespace}@{col-left}.@{fluid--width-name--xxs}{width: @fluid--width--xxs;+.@{col-main},+div+.@{col-main}{left: @fluid--width--xxs}}
+.@{namespace}@{col-left}.@{fluid--width-name--xs}{width: @fluid--width--xs;+.@{col-main},+div+.@{col-main}{left: @fluid--width--xs}}
+.@{namespace}@{col-left}.@{fluid--width-name--sm}{width: @fluid--width--sm;+.@{col-main},+div+.@{col-main}{left: @fluid--width--sm}}
+.@{namespace}@{col-left}.@{fluid--width-name--md}{width: @fluid--width--md;+.@{col-main},+div+.@{col-main}{left: @fluid--width--md}}
+.@{namespace}@{col-left}.@{fluid--width-name--lg}{width: @fluid--width--lg;+.@{col-main},+div+.@{col-main}{left: @fluid--width--lg}}
+.@{namespace}@{col-left}.@{fluid--width-name--xl}{width: @fluid--width--xl;+.@{col-main},+div+.@{col-main}{left: @fluid--width--xl}}
+.@{namespace}@{col-left}.@{fluid--width-name--xxl}{width: @fluid--width--xxl;+.@{col-main},+div+.@{col-main}{left: @fluid--width--xxl}}
+.@{namespace}@{col-left}.@{fluid--width-name--3xl}{width: @fluid--width--3xl;+.@{col-main},+div+.@{col-main}{left: @fluid--width--3xl}}
+.@{namespace}@{col-left}.@{fluid--width-name--3xl}{width: @fluid--width--4xl;+.@{col-main},+div+.@{col-main}{left: @fluid--width--4xl}}
+.@{namespace}@{col-left}.@{fluid--width-name--3xl}{width: @fluid--width--5xl;+.@{col-main},+div+.@{col-main}{left: @fluid--width--5xl}}
+
+.@{namespace}@{col-right}.@{fluid--width-name--5xs}{width: @fluid--width--5xs;+.@{col-main}{right: @fluid--width--5xs}}
+.@{namespace}@{col-right}.@{fluid--width-name--4xs}{width: @fluid--width--4xs;+.@{col-main}{right: @fluid--width--4xs}}
+.@{namespace}@{col-right}.@{fluid--width-name--3xs}{width: @fluid--width--3xs;+.@{col-main}{right: @fluid--width--3xs}}
+.@{namespace}@{col-right}.@{fluid--width-name--xxs}{width: @fluid--width--xxs;+.@{col-main}{right: @fluid--width--xxs}}
+.@{namespace}@{col-right}.@{fluid--width-name--xs}{width: @fluid--width--xs;+.@{col-main}{right: @fluid--width--xs}}
+.@{namespace}@{col-right}.@{fluid--width-name--sm}{width: @fluid--width--sm;+.@{col-main}{right: @fluid--width--sm}}
+.@{namespace}@{col-right}.@{fluid--width-name--md}{width: @fluid--width--md;+.@{col-main}{right: @fluid--width--md}}
+.@{namespace}@{col-right}.@{fluid--width-name--lg}{width: @fluid--width--lg;+.@{col-main}{right: @fluid--width--lg}}
+.@{namespace}@{col-right}.@{fluid--width-name--xl}{width: @fluid--width--xl;+.@{col-main}{right: @fluid--width--xl}}
+.@{namespace}@{col-right}.@{fluid--width-name--xxl}{width: @fluid--width--xxl;+.@{col-main}{right: @fluid--width--xxl}}
+.@{namespace}@{col-right}.@{fluid--width-name--3xl}{width: @fluid--width--3xl;+.@{col-main}{right: @fluid--width--3xl}}
+.@{namespace}@{col-right}.@{fluid--width-name--4xl}{width: @fluid--width--4xl;+.@{col-main}{right: @fluid--width--4xl}}
+.@{namespace}@{col-right}.@{fluid--width-name--5xl}{width: @fluid--width--5xl;+.@{col-main}{right: @fluid--width--5xl}}
