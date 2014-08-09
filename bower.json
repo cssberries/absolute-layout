@@ -1,0 +1,25 @@
+{
+  "name": "absolute-layout",
+  "version": "0.1.0",
+  "authors": [
+    "Yegeniy Belov"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "homepage": "git@github.com:cssberries/absolute-layout.git",
+  "description": "Layout system.",
+  "main": "absolute-layout.less",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "css"
+  ],
+  "devDependencies": {
+    "sub-atoms": "master"
+  }
+}
